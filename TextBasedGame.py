@@ -5,6 +5,13 @@
 # 02/21/2021
 # a dictionary containing all rooms and their
 # possible directions
+
+
+
+import os
+
+name = os.name
+
 rooms = {
     'Slimy Room': {
         'East': 'Mezzanine'
@@ -91,6 +98,10 @@ while 1:
     print('Items in your inventory:', inventory)
     direction = input('Enter item you want OR direction to go OR exit to give up: ')
     # item acquisition statement
+    if name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
     if direction.lower() == items[state].lower():
         if items[state] not in inventory:
             inventory.append(items[state])
